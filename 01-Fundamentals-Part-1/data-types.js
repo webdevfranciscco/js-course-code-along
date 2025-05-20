@@ -28,20 +28,35 @@
     The keyword typof can be used to obtain the type of a value or variable.
 */
 
-let javaScriptIsFun = true;
-console.log(javaScriptIsFun);
 
-console.log(typeof true);
-console.log(typeof javaScriptIsFun);
-console.log(typeof 23);
-console.log(typeof 'Francisco');
+console.log('*********************************************************')
+console.log('##  Data types file')
+console.log('*********************************************************')
+
+let javaScriptIsFun = true;
+console.log(javaScriptIsFun); // ouput = true
+
+console.log(typeof true); // ouput = boolean
+console.log(typeof javaScriptIsFun); // ouput = boolean
+console.log(typeof 23); // ouput = number
+console.log(typeof 'Francisco'); // ouput = string
 
 let codingIsFun = true;
 
-console.log(codingIsFun);
-console.log(typeof codingIsFun);
+console.log(codingIsFun); // output = true
+console.log(typeof codingIsFun); // ouput = boolean
 
 codingIsFun = 'YES!';
 
-console.log(codingIsFun);
-console.log(typeof codingIsFun);
+console.log(codingIsFun); // output = YES!
+console.log(typeof codingIsFun); // ouput = string
+
+let year;
+console.log(year); // output = undefined
+console.log(typeof year); // ouput = undefined
+
+year = 2025;
+console.log(year); // output = 2025
+console.log(typeof year);  // output = number
+
+console.log(typeof null); // output = object
