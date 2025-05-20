@@ -7,6 +7,7 @@ console.log(37);
 let firstName = "React";
 let first = "jonas";
 let firstNamePerson = "john";
+let 3name = "a";
 
 console.log(firstName);
 console.log(firstName);
