@@ -28,7 +28,7 @@
     The keyword typof can be used to obtain the type of a value or variable.
 */
 
-
+/*
 console.log('*********************************************************')
 console.log('##  Data types file')
 console.log('*********************************************************')
@@ -60,3 +60,16 @@ console.log(year); // output = 2025
 console.log(typeof year);  // output = number
 
 console.log(typeof null); // output = object
+*/
+
+let age = 30; // let is used for variables whose value can mutate
+age = 31; // reasigning a new value or "mutating" the variable.
+
+const birthYear = 1990; // const is used for variables whose value can't mutate it creates an "immutable variable"
+birthYear = 1991; // This generates an error message in the console: Uncaught TypeError: Assignment to constant variable.
+
+// An empty constant is not allowed
+
+const job; // This creates the following error messsage in the console: Uncaught SyntaxError: Missing initializer in const declaration (birthYear = 1991 above needs to be commented out for this to happen).
+
+// The var keyword has been replaced by let so it is considered legacy, more about this in section 7 about this. 
