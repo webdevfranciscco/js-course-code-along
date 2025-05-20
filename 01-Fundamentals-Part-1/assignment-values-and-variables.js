@@ -6,6 +6,10 @@
     2. Log their values to the console.
 */
 
+console.log('*********************************************************')
+console.log('##  Assignment on data types and variables')
+console.log('*********************************************************')
+
 let country = "Mexico";
 let continent = "America";
 let population = "130"; //population is in millions
