@@ -5,6 +5,8 @@ console.log("Javascript");
 console.log(37);
 
 let firstName = "React";
+let first = "jonas";
+let firstNamePerson = "john";
 
 console.log(firstName);
 console.log(firstName);
