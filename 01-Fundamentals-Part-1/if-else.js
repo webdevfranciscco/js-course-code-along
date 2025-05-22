@@ -9,10 +9,12 @@ if (age >= 18) {
 }
 
 const birthYear = 1991;
+let century = 20;
+
 if (birthYear <= 2000) {
-    let century = 20;
+    century = 20;
 } else {
-    let century = 21;
+    century = 21;
 }
 
 console.log(century);
