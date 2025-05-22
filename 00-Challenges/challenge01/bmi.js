@@ -25,8 +25,8 @@ const weightJohn = 85; // test data 95 and 85
 
 // Height in meters
 
-const heightMark = 1.95; // test data: 1.69 and 1.95
-const heightJohn = 1.76; // test data: 1.88 and 1.76
+const heightMark = 1.88; // test data: 1.69 and 1.88
+const heightJohn = 1.76; // test data: 1.95 and 1.76
 
 // Body Mass Index, method 1
 
