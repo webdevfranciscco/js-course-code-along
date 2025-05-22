@@ -40,6 +40,7 @@ console.log('BMI Mark:', bmiMarkMethod1);
 console.log('BMI John:', bmiJohnMethod1);
 console.log('Is Mark\'s BMI higher than John\'s?', markHigherBMI);
 
+// Body mass index, method 2
 
 bmiMarkMethod2 = weightMark / (heightMark * heightMark);
 bmiJohnMethod2 = weightJohn / (heightJohn * heightJohn);
