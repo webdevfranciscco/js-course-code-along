@@ -15,7 +15,7 @@ age = '17';
 
 console.log(`age = ${age}`);
 
-if (age === 18) { // ... this is also false ( a string is not equal to a number)...
+if (age === 18) { // ... this is also false (a string is not equal to a number)...
     console.log('You just became an adult :D (strict)');
 } else console.log('You are too young (strict)');
 
@@ -27,4 +27,4 @@ if (age == 18) { // ... as this is (coerced number 17 is not equal to 18)...
 
 // this can be an easy source of bugs and confusion when trying to track them down.
 
-// It is better to ALWAYS USE === to test for equality. If type conversion is a choice, make it explicit bay using a conversion, not by allowing coercion.
+// It is better to ALWAYS USE === to test for equality. If type conversion is a choice, make it explicit by using a conversion, not by allowing coercion.
