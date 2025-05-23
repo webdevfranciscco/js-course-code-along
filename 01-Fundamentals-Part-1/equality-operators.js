@@ -30,34 +30,17 @@
     // It is better to ALWAYS USE === to test for equality. If type conversion is a choice, make it explicit by using a conversion, not by allowing coercion.
 */
 
-let favorite = prompt("What's your favorite number?");
+let favorite = Number(prompt("What's your favorite number?"));
 
 console.log(typeof favorite);
 console.log(`The variable named favorite was set to ${favorite} `);
 
-if (favorite == 23) {
-    console.log('You chose number 23.')
+if (favorite > 23) {
+    console.log('Your number is greater than 23.');
+} else if (favorite < 23) {
+    console.log('Your number is less than 23.');
+} else if (favorite === 23) {
+    console.log('You chose 23.');
+}
 
-} else console.log("You didn't chose  number 23.")
-
-if (favorite === 23) {
-    console.log('You chose number 23.')
-
-} else console.log("You didn't chose  number 23.")
-
-favorite = prompt("What's your favorite number?");
-
-console.log(typeof favorite);
-console.log(`The variable named favorite was set to ${favorite} `);
-
-if (favorite == 23) {
-    console.log('You chose number 23.')
-
-} else console.log("You didn't chose  number 23.")
-
-if (favorite === 23) {
-    console.log('You chose number 23.')
-
-} else console.log("You didn't chose  number 23.")
-
-// There are 2 prompts in this example. Enter the number 3 on the first prompt window and 23 in the second...
+if (favorite !== 23) console.log("You didn't chose  number 23.")
