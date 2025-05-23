@@ -11,7 +11,7 @@ console.log(Boolean(null));
 console.log(Boolean(NaN));
 console.log('End');
 
-const money = 0;
+const money = NaN;
 
 if (money) {
     console.log("Don't spend it all ;)");
@@ -19,10 +19,12 @@ if (money) {
     console.log('You should get a job!');
 }
 
-let height;
+let height = 0; // Any falsy value here...
 
 if (height) {
     console.log('Yay! height is defined.');
 } else {
-    console.log('height is UNDEFINED.');
+    console.log('height is UNDEFINED.'); // will make this code to run. ...
 }
+
+// ... introducing a bug in our code.
