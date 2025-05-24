@@ -10,6 +10,7 @@
     2. Compare the team's average scores to determine the winner of the competition, and print it to the console. Don't forget that there can be a draw, so test for that
     as well (draw means they have the same average score)
     3.Bonus 1: Include a requirement for a minimum score of 100. With this rule, a team only wins if it has a higher score than the other team, and the same time a score of at least 100 points. Hint: Use a logical operator to test for minimum score, as well as multiple else-if blocks
+    4. Bonus 2: Minimum score also applies to a draw! So a draw only happens when both teams have the same score and both have a score greater or equal 100 points. Otherwise, no team wins the trophy
 
     Test data:
     
@@ -18,16 +19,20 @@
 */
 
 let dolphinsAverageScore = (97 + 112 + 101) / 3;
-let koalasAverageScore = (109 + 95 + 123) / 3;
+let koalasAverageScore = (109 + 95 + 106) / 3;
+
+console.log(`Dolphin's average score: ${dolphinsAverageScore}`);
+console.log(`Koala's average score: ${koalasAverageScore}`);
+
 
 let resultMessage = '';
 
-if (dolphinsAverageScore === koalasAverageScore) {
+if (dolphinsAverageScore === koalasAverageScore && dolphinsAverageScore >= 100 && koalasAverageScore >= 100) {
     resultMessage = "There's no winner for this tournament, there is a tie.";
 } else if (dolphinsAverageScore > koalasAverageScore && dolphinsAverageScore >= 100) {
     resultMessage = "Dolphins are the winners!!";
 } else if (dolphinsAverageScore < koalasAverageScore && koalasAverageScore >= 100) {
     resultMessage = "Koalas are the winners!!";
-} else resultMessage = "Neither team is elegible to win, as both teams' scores are below 100"
+} else resultMessage = "Neither team is elegible to win, and no tie is possible either, as both teams' scores are below 100"
 
 console.log(resultMessage);
