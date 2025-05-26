@@ -10,7 +10,6 @@ switch (day) {
         console.log('Prepare theory videos');
         break;
     case 'wednesday':
-        break;
     case 'thursday':
         console.log('Write code examples');
         break;
@@ -18,11 +17,9 @@ switch (day) {
         console.log('Record videos');
         break;
     case 'saturday':
-        break;
     case 'sunday':
         console.log('Enjoy the weekend :D');
         break;
     default:
         console.log('Not a valid day!');
-
 }
