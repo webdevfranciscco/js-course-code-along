@@ -1,12 +1,19 @@
 'use strict';
 
 
-// arrow function
+// arrow functions
 
-const yearsUntilRetirement = birthYear => {
-    const age = 2037 - birthYear;
-    const retirement = 65 - age;
-    return retirement;
+function cutFruitPieces(fruit) {
+    return fruit * 4;
 }
 
-console.log(`Years to retirement: ${yearsUntilRetirement(1991)}`);
+
+function fruitProcessor(apples, oranges) {
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
+
+    const juice = `Juice with ${applePieces} apple piece(s) and ${orangePieces} oranges piece(s).`;
+    return juice;
+}
+
+console.log(fruitProcessor(2, 3));
