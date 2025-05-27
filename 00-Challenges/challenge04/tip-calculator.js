@@ -31,5 +31,5 @@ let bill = 430;
 
 const tip = (bill >= 50 && bill <= 300) ? bill * 15 / 100 : bill * 20 / 100;
 
-console.log(`For a bill of $${bill}, the tip is $${tip} and the total is ${bill + tip}.`);
+console.log(`For a bill of $${bill}, the tip is $${tip} and the total is $${bill + tip}.`);
 
