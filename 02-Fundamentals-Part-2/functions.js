@@ -1,16 +1,20 @@
 'use strict';
 
-function fruitProcessor(apples, oranges) {
-    const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
-    return juice;
+
+// function declaration
+
+function calcAge1(birthYear) {
+    return 2037 - birthYear;
 }
 
-const appleJuice = fruitProcessor(5, 0);
-console.log(appleJuice);
-
-const appleOrangeJuice = fruitProcessor(2, 4);
-console.log(appleOrangeJuice);
+const age1 = calcAge1(1991);
+console.log(`The age from the function declaration is ${age1} years.`);
 
 
+// function expression
+const calcAge2 = function (birthYear) {
+    return 2037 - birthYear;  // this function is an expression because it returns a value... functions are not actually a type of object, but values
+}
 
-
+const age2 = calcAge2(1998);
+console.log(`The age from the function expression is ${age2} years.`);
