@@ -1,10 +1,16 @@
 'use strict';
 
-function logger() {
-    console.log('My name is Jonas');
+function fruitProcessor(apples, oranges) {
+    const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+    return juice;
 }
 
-// call / run / invoke are three ways to refer to executing a function
-logger();
-logger();
-logger();
+const appleJuice = fruitProcessor(5, 0);
+console.log(appleJuice);
+
+const appleOrangeJuice = fruitProcessor(2, 4);
+console.log(appleOrangeJuice);
+
+
+
+
