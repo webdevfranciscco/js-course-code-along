@@ -35,6 +35,9 @@ console.log(friends);
 console.log(`shift - New length = ${newLengthShift}`);
 console.log(`Shifted element = ${shiftedElement}`);
 
+// indexOf returns the position of a value IF it exists within the array
+console.log(`The position of the element with value: 'Peter' is ${friends.indexOf('Peter')}`);
+console.log(`The position of the element with value: 'Bob' is ${friends.indexOf('Bob')}`); // the return value for an element not present is -1
 
 
 
