@@ -27,7 +27,13 @@ console.log(friends);
 console.log(`pop - New length = ${newLengthPop}`);
 console.log(`Popped element = ${poppedElement}`);
 
+// shift removes the first element of an array and returns its value
+const shiftedElement = friends.shift();
+const newLengthShift = friends.length;
 
+console.log(friends);
+console.log(`shift - New length = ${newLengthShift}`);
+console.log(`Shifted element = ${shiftedElement}`);
 
 
 
