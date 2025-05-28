@@ -1,7 +1,14 @@
 'use strict';
 
-let hasdriversLicense = false;
-const passTest = true;
+const friend1 = 'Michael';
+const friend2 = 'Steven';
+const friend3 = 'Peter';
 
-if (passTest) hasDriverLicense = true; // intentional omission of an s letter to test strict mode
-if (hasSriversLicense) console.log('I can drive :D');
+const friends = ['Michael', 'Steven', 'Peter'];
+console.log(friends);
+
+const years = new Array(1991, 1984, 2008, 2020);
+
+console.log(friends[0]); // access first element
+
+console.log(friends[2]); // access third and last element
