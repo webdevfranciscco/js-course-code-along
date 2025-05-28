@@ -39,6 +39,7 @@ console.log(`Shifted element = ${shiftedElement}`);
 console.log(`The position of the element with value: 'Peter' is ${friends.indexOf('Peter')}`);
 console.log(`The position of the element with value: 'Bob' is ${friends.indexOf('Bob')}`); // the return value for an element not present is -1
 
-
-
+// includes returns true if a value is in the array and false if not
+console.log(`'Steven is part of the array' is ${friends.includes('Steven')};`)
+console.log(`'Bob is part of the array' is ${friends.includes('Bob')};`)
 
