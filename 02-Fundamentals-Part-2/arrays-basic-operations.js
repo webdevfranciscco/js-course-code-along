@@ -43,3 +43,7 @@ console.log(`The position of the element with value: 'Bob' is ${friends.indexOf(
 console.log(`'Steven is part of the array' is ${friends.includes('Steven')};`)
 console.log(`'Bob is part of the array' is ${friends.includes('Bob')};`)
 
+// The includes method uses strict equality (no type coercion)
+friends.push(23);
+console.log(` The value '23' is part of the array is ${friends.includes('23')};`)
+console.log(` The value 23 is part of the array is ${friends.includes(23)};`)
