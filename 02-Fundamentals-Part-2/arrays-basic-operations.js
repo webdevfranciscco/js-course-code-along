@@ -47,3 +47,20 @@ console.log(`'Bob is part of the array' is ${friends.includes('Bob')};`)
 friends.push(23);
 console.log(` The value '23' is part of the array is ${friends.includes('23')};`)
 console.log(` The value 23 is part of the array is ${friends.includes(23)};`)
+
+// Example use for the includes method
+const friendsName = 'Bob';
+
+if (friends.includes(friendsName)) {
+    console.log(`You have a friend called ${friendsName}`);
+} else {
+    console.log(`You don't have a friend called ${friendsName}`);
+}
+
+friends.push('Bob');
+
+if (friends.includes(friendsName)) {
+    console.log(`You have a friend called ${friendsName}`);
+} else {
+    console.log(`You don't have a friend called ${friendsName}`);
+}
