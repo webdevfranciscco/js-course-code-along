@@ -37,3 +37,13 @@ const nameKey = 'Name';
 
 console.log(jonasObject['first' + nameKey]);
 console.log(jonasObject['last' + nameKey]);
+
+// Another example of expressions in brackets
+
+const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job and friends.')
+
+if (jonasObject[interestedIn]) {
+    console.log(jonasObject[interestedIn]);
+} else {
+    console.log('Wrong request! Choose between firstName, lastName, age, job and friends.');
+}
