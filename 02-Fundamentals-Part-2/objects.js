@@ -18,3 +18,15 @@ const jonasObject = {
     job: 'teacher',
     friends: ['Michael', 'Peter', 'Steven']
 };
+
+// To retrieve a value from an object is with the name of the property
+// We can do this with two different methods
+
+// Method 1: dot notation
+
+console.log('Dot notation:', jonasObject.lastName);
+
+// Method 2: brackets notation
+// An advantage here is that any expression can be within the brackets, which is powerful
+
+console.log('Brackets notation:', jonasObject['lastName']);
