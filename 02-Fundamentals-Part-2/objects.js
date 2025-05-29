@@ -30,3 +30,10 @@ console.log('Dot notation:', jonasObject.lastName);
 // An advantage here is that any expression can be within the brackets, which is powerful
 
 console.log('Brackets notation:', jonasObject['lastName']);
+
+// Use of expressions withn brackets
+
+const nameKey = 'Name';
+
+console.log(jonasObject['first' + nameKey]);
+console.log(jonasObject['last' + nameKey]);
