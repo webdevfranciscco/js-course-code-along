@@ -47,3 +47,9 @@ if (jonasObject[interestedIn]) {
 } else {
     console.log('Wrong request! Choose between firstName, lastName, age, job and friends.');
 }
+
+// adding properties to an object using both notations
+
+jonasObject.location = 'Portugal';
+jonasObject['twitter'] = '@jonasschmedtmann';
+console.log(jonasObject);
