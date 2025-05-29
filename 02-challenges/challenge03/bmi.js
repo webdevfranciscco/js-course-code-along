@@ -13,32 +13,30 @@ Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.9
 
 'use strict';
 
-const markObject = {
-    firstName: 'Mark',
-    lastName: 'Miller',
-    weight: 78,
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
     height: 1.69,
 
-    calcBMI: function (weight, height) {
-        this.bmi = this.weight / (this.height * this.height);
+    calcBMI: function (mass, height) {
+        this.bmi = this.mass / (this.height * this.height);
         return this.bmi;
     }
 }
 
-const johnObject = {
-    firstName: 'John',
-    lastName: 'Smith',
-    weight: 92,
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
     height: 1.95,
 
-    calcBMI: function (weight, height) {
-        this.bmi = this.weight / (this.height * this.height);
+    calcBMI: function (mass, height) {
+        this.bmi = this.mass / (this.height * this.height);
         return this.bmi;
     }
 }
 
-console.log((johnObject.calcBMI() > markObject.calcBMI())
+console.log((john.calcBMI() > mark.calcBMI())
     ?
-    `${johnObject.firstName} ${johnObject.lastName}'s BMI (${johnObject.calcBMI()}) is higher thank ${markObject.firstName} ${markObject.lastName}'s BMI (${markObject.calcBMI()})!`
+    `${john.fullName}'s BMI (${john.calcBMI()}) is higher thank ${mark.fullName}'s BMI (${mark.calcBMI()})!`
     :
-    `${markObject.firstName} ${markObject.lastName}'s BMI (${markObject.calcBMI()}) is higher thank ${johnObject.firstName} ${johnObject.lastName}'s BMI (${johnObject.calcBMI()})!`);
+    `${mark.fullName}'s BMI (${mark.calcBMI()}) is higher thank ${john.fullName}'s BMI (${john.calcBMI()})!`);
