@@ -12,13 +12,26 @@ const jonasObject = {
         return this.age;
     },
 
-    logNameAndLicenseStatus: function () {
-        if (this.hasDriversLicense) {
-            licenseStatus = 'a';
-        } else licenseStatus = 'no';
+    /* My code:
+    
+        logNameAndLicenseStatus: function () {
+            if (this.hasDriversLicense) {
+                licenseStatus = 'a';
+            } else licenseStatus = 'no';
+    
+            return `${this.firstName} is a ${this.calcAge()} year old ${this.job}, and he has ${licenseStatus} driver's license.`;
+        }
+    
+    */
 
-        return `${this.firstName} is a ${this.calcAge()} year old ${this.job}, and he has ${licenseStatus} driver's license.`;
+    //  The teacher's code (better, shorter)
+
+    logNameAndLicenseStatus: function () {
+
+
+        return `${this.firstName} is a ${this.calcAge()} year old ${this.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`;
     }
+
 };
 
 // Challenge
