@@ -8,20 +8,11 @@ const jonasObject = {
     hasDriversLicense: true,
 
     calcAge: function (birthYear) {
-        console.log(this);
-        return 2037 - this.birthYear;
+        this.age = 2037 - this.birthYear;
+        return this.age;
     }
 };
 
-/*
-    console.log(jonasObject.calcAge(1991));
-    console.log(jonasObject['calcAge'](1991));
-    
-    // Altenatively
-    
-    console.log(jonasObject.calcAge(jonasObject.birthYear));
-    console.log(jonasObject['calcAge'](jonasObject.birthYear));
-    
-*/
-
 console.log(jonasObject.calcAge());
+
+console.log(jonasObject.age);
