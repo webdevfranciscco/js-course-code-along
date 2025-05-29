@@ -53,3 +53,11 @@ if (jonasObject[interestedIn]) {
 jonasObject.location = 'Portugal';
 jonasObject['twitter'] = '@jonasschmedtmann';
 console.log(jonasObject);
+
+// Challenge:
+// Using what you've learned build the following sentence from jonasArray and jonasObject
+// 'Jonas has 3 friends, and his best friend is called Michael'
+
+console.log(`${jonasObject.firstName} has ${jonasObject.friends.length} friends, and his best friend is called ${jonasObject['friends'][0]}.`);
+
+console.log(`${jonasObject.firstName} has ${jonasObject.friends.length} friends, and his best friend is called ${jonasObject.friends[0]}.`);
