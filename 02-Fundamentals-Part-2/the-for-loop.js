@@ -34,3 +34,10 @@ for (let i = 0; i < jonas.length; i++) {
     if (typeof jonas[i] != 'string') continue; // this means, continue to the code after this loop, which is the same as saying: exit this loop
     console.log(jonas[i], typeof jonas[i]);
 }
+
+// break
+console.log('--- BREAK WITH NUMBER ---');
+for (let i = 0; i < jonas.length; i++) {
+    if (typeof jonas[i] === 'number') break; // this means, continue to the code after this loop, which is the same as saying: exit this loop
+    console.log(jonas[i], typeof jonas[i]);
+}
