@@ -1,75 +1,35 @@
+
 /*
-    CHALLENGE #4
-    
-    Let's improve Steven's tip calculator even more, this time using loops!
+    Coding Challenge #4
+
+    Steven wants to build a very simple tip calculator for whenever he goes eating in a restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and
+    300. If the value is different, the tip is 20%.
 
     Your tasks:
 
-    1. Create an array called bills containing all 10 test bill values.
+    1. Calculate the tip, depending on the bill value. Create a variable called 'tip' for this. It's not allowed to use an if/else statement 😅 (If it's easier for you, you can
+    start with an if/else statement, and then try to convert it to a ternary operator!)
 
-    2. Create empty arrays for the tips and the totals (tips and totals)
+    2. Print a string to the console containing the bill value, the tip, and the final value (bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value
+    316.25”
 
-    3. Use the calcTip function we wrote before (included in the starter code) to calculate tips and total values (bill + tip) for every bill value in the bills array. Use a for loop to perform the 10 calculations!
+    Test data:
+    
+    § Data 1: Test for bill values 275, 40 and 430
+    
+    Hints:
+    
+    § To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+    
+    § Value X is between 50 and 300, if it's >= 50 && <= 300 
 
-
-
-    TEST DATA: 22, 295, 176, 440, 37, 105, 10, 1100, 86, and 52.
-
-
-
-    BONUS:
-
-    Write a function calcAverage which takes an array called arr as an argument. This function calculates the average of all numbers in the given array. This is a DIFFICULT challenge (we haven't done this before)! Here is how to solve it if you feel like it:
-
-    1. First, you will need to add up all values in the array. To do the addition, start by creating a variable sum that starts at 0. Then loop over the array using a for loop. In each iteration, add the current value to the sum variable. This way, by the end of the loop, you have all values added together.
-
-    2. To calculate the average, divide the sum you calculated before by the length of the array (because that's the number of elements).
-
-    3. Call the function with the totals array.
 */
-
-'use strict';
-
-
-
-// const bills = [10, 100, 1000, 10000, 5, 50, 500, 5000, 50000];
-
-const calcTip = function (bill) {
-    return (bill >= 50 && bill <= 300) ? bill * 15 / 100 : bill * 20 / 100;
-}
 
 console.log('tip calculator');
 
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let bill = 430;
 
-const tips = [];
-const totals = [];
+const tip = (bill >= 50 && bill <= 300) ? bill * 15 / 100 : bill * 20 / 100;
 
-for (let i = 0; i <= bills.length - 1; i++) {
-    tips[i] = calcTip(bills[i]);
+console.log(`For a bill of $${bill}, the tip is $${tip} and the total is $${bill + tip}.`);
 
-    totals[i] = bills[i] + tips[i];
-}
-
-console.log('Totals:', totals);
-
-
-// ** averaging function  *******************
-
-const array = [10, 10];
-let sum = 0;
-
-const calcAverage = function (arr) {
-    for (let i = 0; i <= arr.length - 1; i++) {
-        sum = sum + arr[i];
-    }
-
-    let average = sum / (arr.length);
-
-    return average;
-}
-
-console.log('Bills average:', calcAverage(totals));
-
-
-// Getting the following error from Udemy's test for the bonus challenge: The `calcAverage` function should calculate the average of numbers from passed array working on it
