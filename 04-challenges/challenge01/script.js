@@ -20,7 +20,8 @@
 
 "use strict";
 
-const maximumTemperaturesDailyForecast = [17, 21, 23];
+const maximumTemperaturesDailyForecast1 = [17, 21, 23];
+const maximumTemperaturesDailyForecast2 = [12, 5, -5, 0, 4];
 
 let printForecast = function (forecastData) {
   let forecastString = "";
@@ -33,6 +34,5 @@ let printForecast = function (forecastData) {
   return forecastString;
 };
 
-const forecast = printForecast(maximumTemperaturesDailyForecast);
-
-console.log(forecast);
+console.log(printForecast(maximumTemperaturesDailyForecast1));
+console.log(printForecast(maximumTemperaturesDailyForecast2));
