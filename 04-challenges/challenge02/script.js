@@ -7,8 +7,8 @@
 
     1. Total hours worked DONE
     2. Average daily hours DONE
-    3. The day with the most hours worked DONE
-    4. Number of days worked DONE
+    3. The day with the most hours worked >> assume day zero is Monday FIX
+    4. Number of days worked >> consider days with 0 hors as non worked FIX
     5. Wether the week was full-time (worked 35 hours or more) DONE
 
     Test Data 2: [7.5, 8, 6.5, 0, 8.5, 4, 0]
