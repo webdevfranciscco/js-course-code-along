@@ -7,8 +7,8 @@
 
     1. Total hours worked DONE
     2. Average daily hours DONE
-    3. The day with the most hours worked >> assume day zero is Monday FIX
-    4. Number of days worked >> consider days with 0 hors as non worked FIX
+    3. The day with the most hours worked >> assume day zero is Monday DONE
+    4. Number of days worked >> consider days with 0 hors as non worked DONE
     5. Wether the week was full-time (worked 35 hours or more) DONE
 
     Test Data 2: [7.5, 8, 6.5, 0, 8.5, 4, 0]
@@ -23,6 +23,16 @@ let workedHoursReport = function (thisWeeksWorkedHours) {
   let totalHours = 0;
   let averageDailyHours = 0;
   let maxDailyHours = 0;
+  let week = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+  let daysWorked = 0;
 
   for (let i = 0; i < thisWeeksWorkedHours.length; i++) {
     totalHours += thisWeeksWorkedHours[i];
@@ -30,15 +40,16 @@ let workedHoursReport = function (thisWeeksWorkedHours) {
     //if (thisWeeksWorkedHours[i] > maxDailyHours)
     //  maxDailyHours = thisWeeksWorkedHours[i];
     if (thisWeeksWorkedHours[i] > maxDailyHours) maxDailyHours = i;
+    if (thisWeeksWorkedHours[i] !== 0) daysWorked++;
   }
 
   weeklyReport.totalHoursWorked = totalHours;
 
   weeklyReport.averageDailyHours = totalHours / thisWeeksWorkedHours.length;
 
-  weeklyReport.dayWithMostWorkedHours = maxDailyHours;
+  weeklyReport.dayWithMostWorkedHours = week[maxDailyHours];
 
-  weeklyReport.numberOfDaysWorked = thisWeeksWorkedHours.length;
+  weeklyReport.numberOfDaysWorked = daysWorked;
 
   totalHours > 35
     ? (weeklyReport.isFullTimeWeek = true)
