@@ -14,6 +14,9 @@ document.querySelector(".check").addEventListener("click", function () {
       "Please,enter a number greater than zero!";
   } else if (guess === secretNumber) {
     document.querySelector(".message").textContent = "You guessed it!!!";
+
+    document.querySelector("body").style.backgroundColor = "#60b347";
+    document.querySelector(".number").style.width = "30rem";
   } else if (guess > secretNumber) {
     if (score > 1) {
       document.querySelector(".message").textContent =
