@@ -38,21 +38,12 @@ document.querySelector(".check").addEventListener("click", function () {
     if (score > highScore) {
       document.querySelector(".highscore").textContent = score;
     }
-  } else if (guess > secretNumber) {
+  } else if (guess !== secretNumber) {
     if (score > 1) {
       document.querySelector(".message").textContent =
-        "Your number is too high ";
-      score--;
-      document.querySelector(".score").textContent = score;
-    } else {
-      score--;
-      document.querySelector(".score").textContent = score;
-      document.querySelector(".message").textContent = "Game over! ☹️";
-    }
-  } else if (guess < secretNumber) {
-    if (score > 1) {
-      document.querySelector(".message").textContent =
-        "Your number is too low ";
+        guess > secretNumber
+          ? "Your number is too high"
+          : "Your number is too low ";
       score--;
       document.querySelector(".score").textContent = score;
     } else {
