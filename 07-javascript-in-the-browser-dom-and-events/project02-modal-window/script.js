@@ -1,3 +1,5 @@
+// This is the complete code for project 02 - Modal window
+
 'use strict';
 
 const modal = document.querySelector('.modal');
