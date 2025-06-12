@@ -15,12 +15,11 @@ for (let i = 0; i < buttonsOpenModal.length; i++) {
   });
 }
 
-buttonCloseModal.addEventListener('click', function () {
+const closeModalAndOverlay = function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
-});
+};
 
-overlay.addEventListener('click', function () {
-  modal.classList.add('hidden');
-  overlay.classList.add('hidden');
-});
+buttonCloseModal.addEventListener('click', closeModalAndOverlay);
+
+overlay.addEventListener('click', closeModalAndOverlay);
