@@ -22,3 +22,7 @@ for (let i = 0; i < buttonsOpenModal.length; i++) {
 buttonCloseModal.addEventListener('click', closeModalAndOverlay);
 
 overlay.addEventListener('click', closeModalAndOverlay);
+
+document.addEventListener('keydown', function (event) {
+  console.log(event.key);
+});
