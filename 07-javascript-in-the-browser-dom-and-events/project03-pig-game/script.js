@@ -1,6 +1,9 @@
 'use strict';
 
 // select elements
+const domElementBoardPanelForPlayer0 = document.querySelector('.player--0');
+const domElementBoardPanelForPlayer1 = document.querySelector('.player--1');
+
 const domElementScore0 = document.querySelector('#score--0'); // Method 1 to select id elements
 const domElementScore1 = document.getElementById('score--1'); // Method 2 to select id elements
 
@@ -42,5 +45,7 @@ buttonRoll.addEventListener('click', function () {
     document.getElementById(`current--${activePlayer}`).textContent = 0;
     // Switch to next player
     activePlayer = activePlayer === 0 ? 1 : 0;
+    domElementBoardPanelForPlayer0.classList.toggle('player--active');
+    domElementBoardPanelForPlayer1.classList.toggle('player--active');
   }
 });
