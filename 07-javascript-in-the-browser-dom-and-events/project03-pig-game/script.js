@@ -1,14 +1,13 @@
 'use strict';
 
-
 // select elements
-let domElementScore0 = document.querySelector('score--0');
-let domElementScore1 = document.getElementById('score--1');
+const domElementScore0 = document.querySelector('#score--0');
+const domElementScore1 = document.getElementById('score--1');
 
-let domElementDice = document.getQuerySelector('dice');
+const domElementDice = document.querySelector('.dice');
 
 // set initial conditions
-domElementScore0.textValue = 0;
-domElementScore1.textValue = 0;
+domElementScore0.textContent = 0;
+domElementScore1.textContent = 0;
 
-domElementDice.classList.add('hidden') = 0;
+domElementDice.classList.add('hidden');
