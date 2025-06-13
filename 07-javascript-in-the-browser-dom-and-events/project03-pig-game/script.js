@@ -13,7 +13,9 @@ const buttonNew = document.querySelector('.btn--new');
 const buttonRoll = document.querySelector('.btn--roll');
 const buttonHold = document.querySelector('.btn--hold');
 
+const scoreBoard = [0, 0];
 let currrentScore = 0;
+let activePlayer = 0;
 
 // set initial conditions
 domElementScore0.textContent = 0;
@@ -25,7 +27,6 @@ domElementDice.classList.add('hidden');
 buttonRoll.addEventListener('click', function () {
   // 1. Generate random dice roll
   const diceRollResult = Math.trunc(Math.random() * 6) + 1;
-  console.log(diceRollResult);
   // 2. Display dice
   domElementDice.classList.remove('hidden');
   domElementDice.src = `dice-${diceRollResult}.png`;
@@ -33,9 +34,13 @@ buttonRoll.addEventListener('click', function () {
   if (diceRollResult !== 1) {
     // Add dice to current score
     currrentScore += diceRollResult;
-    domElementCurrentScore0.textContent = currrentScore;
+    document.getElementById(`current--${activePlayer}`).textContent =
+      currrentScore;
   } else {
+    // Reset score both internally and on the board
+    currrentScore = 0;
+    document.getElementById(`current--${activePlayer}`).textContent = 0;
     // Switch to next player
-    domElementCurrentScore0.textContent = 0; // temporary functionality, TODO
+    activePlayer = activePlayer === 0 ? 1 : 0;
   }
 });
