@@ -49,3 +49,15 @@ buttonRoll.addEventListener('click', function () {
     domElementBoardPanelForPlayer1.classList.toggle('player--active');
   }
 });
+
+buttonHold.addEventListener('click', function () {
+  // 1. Add current score to active player's score
+  scoreBoard[activePlayer] += currrentScore;
+  document.getElementById(`score--${activePlayer}`).textContent =
+    scoreBoard[activePlayer];
+
+  currrentScore = 0;
+  document.getElementById(`current--${activePlayer}`).textContent = 0;
+
+  // 2. Check if player's score is > 100, if so, finish the game, else, switch players
+});
