@@ -12,7 +12,7 @@ const domElementCurrentScore1 = document.getElementById('current--1');
 
 const domElementDice = document.querySelector('.dice');
 
-const buttonNew = document.querySelector('.btn--new');
+const buttonNewGame = document.querySelector('.btn--new');
 const buttonRoll = document.querySelector('.btn--roll');
 const buttonHold = document.querySelector('.btn--hold');
 
@@ -69,13 +69,9 @@ buttonHold.addEventListener('click', function () {
 
     // 2. Check if player's score is > 100, if so, finish the game, else, switch players
 
-    console.log(`score player ${activePlayer}`, scoreBoard[activePlayer]);
-
     if (scoreBoard[activePlayer] >= 20) {
       // Finish the game
       isPlayActive = false;
-      console.log(`active player >`, activePlayer); // DEBUG
-      console.log('GAME OVER'); // DEBUG
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.add('player--winner');
@@ -86,5 +82,25 @@ buttonHold.addEventListener('click', function () {
     } else {
       displayPlayersSwitchOnTheBoard();
     }
+  }
+});
+
+buttonNewGame.addEventListener('click', function () {
+  isPlayActive = true;
+  currrentScore = 0;
+  scoreBoard[0] = 0;
+  scoreBoard[1] = 0;
+
+  document
+    .querySelector(`.player--${activePlayer}`)
+    .classList.remove('player--winner');
+
+  domElementBoardPanelForPlayer0.classList.add('player--active');
+  domElementBoardPanelForPlayer1.classList.remove('player--active');
+
+  activePlayer = 0;
+
+  for (let i = 0; i <= 1; i++) {
+    document.getElementById(`score--${i}`).textContent = 0;
   }
 });
