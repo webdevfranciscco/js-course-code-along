@@ -16,10 +16,32 @@ const buttonNewGame = document.querySelector('.btn--new');
 const buttonRoll = document.querySelector('.btn--roll');
 const buttonHold = document.querySelector('.btn--hold');
 
-const scoreBoard = [0, 0];
-let currrentScore = 0;
-let activePlayer = 0;
-let isPlayActive = true;
+let scoreBoard;
+let currrentScore;
+let activePlayer;
+let isPlayActive;
+
+// set initial conditions
+const initialize = function () {
+  scoreBoard = [0, 0];
+  currrentScore = 0;
+  activePlayer = 0;
+  isPlayActive = true;
+
+  domElementScore0.textContent = 0;
+  domElementScore1.textContent = 0;
+
+  domElementCurrentScore0.textContent = 0;
+  domElementCurrentScore1.textContent = 0;
+
+  domElementDice.classList.add('hidden');
+
+  domElementBoardPanelForPlayer0.classList.remove('player--winner');
+  domElementBoardPanelForPlayer1.classList.remove('player--winner');
+
+  domElementBoardPanelForPlayer0.classList.add('player--active');
+  domElementBoardPanelForPlayer1.classList.remove('player--active');
+};
 
 const displayPlayersSwitchOnTheBoard = function () {
   // Reset score both internally and on the board
@@ -30,12 +52,6 @@ const displayPlayersSwitchOnTheBoard = function () {
   domElementBoardPanelForPlayer0.classList.toggle('player--active');
   domElementBoardPanelForPlayer1.classList.toggle('player--active');
 };
-
-// set initial conditions
-domElementScore0.textContent = 0;
-domElementScore1.textContent = 0;
-
-domElementDice.classList.add('hidden');
 
 // rolling dice functionality
 buttonRoll.addEventListener('click', function () {
@@ -85,22 +101,6 @@ buttonHold.addEventListener('click', function () {
   }
 });
 
-buttonNewGame.addEventListener('click', function () {
-  isPlayActive = true;
-  currrentScore = 0;
-  scoreBoard[0] = 0;
-  scoreBoard[1] = 0;
+buttonNewGame.addEventListener('click', initialize);
 
-  document
-    .querySelector(`.player--${activePlayer}`)
-    .classList.remove('player--winner');
-
-  domElementBoardPanelForPlayer0.classList.add('player--active');
-  domElementBoardPanelForPlayer1.classList.remove('player--active');
-
-  activePlayer = 0;
-
-  for (let i = 0; i <= 1; i++) {
-    document.getElementById(`score--${i}`).textContent = 0;
-  }
-});
+initialize();
