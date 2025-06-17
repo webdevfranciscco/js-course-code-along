@@ -85,7 +85,7 @@ buttonHold.addEventListener('click', function () {
 
     // 2. Check if player's score is > 100, if so, finish the game, else, switch players
 
-    if (scoreBoard[activePlayer] >= 20) {
+    if (scoreBoard[activePlayer] >= 100) {
       // Finish the game
       isPlayActive = false;
       document
