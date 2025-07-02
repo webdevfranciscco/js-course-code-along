@@ -25,7 +25,8 @@ jonas0.calcAge0();
 // at this-keyword-pitfalls.js:18:8
 */
 
-// solution 1
+/*
+// solution 1: copy "this" to a "that" variable before the inner function
 
 const jonas1 = {
   firstName1: 'Jonas',
@@ -43,3 +44,22 @@ const jonas1 = {
 };
 
 jonas1.calcAge1();
+*/
+
+// solution 2: convert the inner function to an arrow function
+
+console.log(self);
+const jonas2 = {
+  firstName1: 'Jonas',
+  year2: 1991,
+  calcAge2: function () {
+    console.log(2037 - this.year2);
+
+    const isAdult2 = () => {
+      console.log(2037 - this.year2 >= 18);
+    };
+    isAdult2();
+  },
+};
+
+jonas2.calcAge2();
