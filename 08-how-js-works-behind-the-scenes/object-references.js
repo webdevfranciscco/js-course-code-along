@@ -9,11 +9,15 @@ const jessica = {
   age: 27,
 };
 
-let marriedJessica = jessica; // << changing const to let here
+function marryPerson(originalPerson, newLastName) {
+  originalPerson.lastName = newLastName;
+  return originalPerson;
+}
 
-marriedJessica.lastName = 'Davis';
+// const marriedJessica = jessica;
+// marriedJessica.lastName = 'Davis';
 
-marriedJessica = { number: 2 }; // << allows us to do this
+const marriedJessica = marryPerson(jessica, 'Davis');
 
 console.log('Before:', jessica);
 console.log('After:', marriedJessica);
