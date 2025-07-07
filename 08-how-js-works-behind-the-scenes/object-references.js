@@ -3,6 +3,7 @@
 // object reference in practice
 
 const jessica = {
+  objectId: 'jessica',
   firstName: 'Jessica',
   lastName: 'Williams',
   age: 27,
