@@ -28,6 +28,13 @@ const [first, second] = restaurant.categories;
 console.log('first:', first, 'second:', second);
 // console output: first: Italian second: Pizzeria
 
-const [_first, , _third] = restaurant.categories;
+let [_first, , _third] = restaurant.categories;
 console.log('first:', _first, 'third:', _third);
 // console output: first: Italian third: Vegetarian
+
+// swapping values manually
+let temp = _first;
+_first = _third;
+_third = temp;
+console.log('first:', _first, 'third:', _third);
+// console output: first: Vegetarian third: Italian
