@@ -63,3 +63,8 @@ console.log(restaurant.order(2, 0));
 // destructure the array returned by the function order()
 const [starter, mainCourse] = restaurant.order(2, 0);
 console.log('Starter:', starter, '/ Main course:', mainCourse);
+
+// getting a nested array using destructuring
+const nested = [2, 4, [5, 6]];
+const [i, , k] = nested;
+console.log('Get the first and third element (a nested array):', i, k);
