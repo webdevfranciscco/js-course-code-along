@@ -27,6 +27,10 @@ const jessica2 = {
   siblings: ['Alice', 'Bob'],
 };
 
+// the spread operator creates a shallow copy
+// copying the values of the primitives
+// and the references to the objects
+// just as they are in the origin object
 const jessica2Copy = { ...jessica2 }; // this copies all the elments of jessica2 into jessica2Copy
 
 console.log(
