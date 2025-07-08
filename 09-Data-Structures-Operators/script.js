@@ -6,6 +6,10 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
 };
 
 const arr = [2, 3, 4];
@@ -45,3 +49,11 @@ console.log('first:', _first, 'third:', _third);
 [_first, , _third] = [_third, , _first];
 console.log('first:', _first, 'third:', _third);
 // console output: first: Vegetarian third: Italian
+
+console.log(restaurant.order(2, 0));
+// console output:
+//    (2) ['Garlic Bread', 'Pizza']
+//        0: "Garlic Bread"
+//        1: "Pizza"
+//        length: 2
+//        [[Prototype]]: Array(0)
