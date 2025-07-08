@@ -23,3 +23,11 @@ console.log('arr:', arr);
 // by using a JavaScript syntax expression:
 const [x, y, z] = arr;
 console.log('x:', x, 'y:', y, 'z:', z);
+
+const [first, second] = restaurant.categories;
+console.log('first:', first, 'second:', second);
+// console output: first: Italian second: Pizzeria
+
+const [_first, , _third] = restaurant.categories;
+console.log('first:', _first, 'third:', _third);
+// console output: first: Italian third: Vegetarian
