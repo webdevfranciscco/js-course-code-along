@@ -61,3 +61,20 @@ console.log(
 console.log(
   'The spread operator copies all of the properties, but any properties that are also objects are still passed by reference.'
 );
+
+// deep copy or clone
+const jessica2Clone = structuredClone(jessica2);
+
+console.log('The clone of jessica2 is identical:');
+console.log('jessica2:', jessica2);
+console.log('jessica2Clone:', jessica2Clone);
+console.log('Both are their obect properties still linked?');
+
+// let's make jessica2Clone unique by changing de objectId, the last name and by adding a sibling
+jessica2Clone.objectId = 'jessica2Clone';
+jessica2Clone.lastName = 'Smith';
+jessica2Clone.siblings.push('James');
+
+console.log('Yes, theay are different now!:');
+console.log('jessica2:', jessica2);
+console.log('jessica2Clone:', jessica2Clone);
