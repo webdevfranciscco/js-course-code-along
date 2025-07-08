@@ -33,8 +33,15 @@ console.log('first:', _first, 'third:', _third);
 // console output: first: Italian third: Vegetarian
 
 // swapping values manually
+/*
 let temp = _first;
 _first = _third;
 _third = temp;
+console.log('first:', _first, 'third:', _third);
+// console output: first: Vegetarian third: Italian
+*/
+
+// swapping by using destructuring
+[_first, , _third] = [_third, , _first];
 console.log('first:', _first, 'third:', _third);
 // console output: first: Vegetarian third: Italian
