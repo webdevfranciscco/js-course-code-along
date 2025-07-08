@@ -7,3 +7,19 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 };
+
+const arr = [2, 3, 4];
+
+// destructuring.- The destructuring syntax is a JavaScript syntax that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+
+// manually destructuring the "arr" array into 3 variables:
+const a = arr[0];
+const b = arr[1];
+const c = arr[2];
+console.log('a:', a, 'b:', b, 'c:', c);
+console.log('arr:', arr);
+
+// destructuring the "arr" array into 3 variables
+// by using a JavaScript syntax expression:
+const [x, y, z] = arr;
+console.log('x:', x, 'y:', y, 'z:', z);
