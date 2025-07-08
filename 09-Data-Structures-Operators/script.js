@@ -68,3 +68,20 @@ console.log('Starter:', starter, '/ Main course:', mainCourse);
 const nested = [2, 4, [5, 6]];
 const [i, , k] = nested;
 console.log('Get the first and third element (a nested array):', i, k);
+
+// destructuring inside destructuring
+const [l, , [m, n]] = nested;
+console.log('Individual destructured elements:', l, m, n);
+
+// destructuring beyond array's length
+const [p, q, r] = [8, 9];
+console.log('This tries to pull an element that does not exist:', p, q, r);
+
+// default values
+const [f = -1, g = -1, h = -1] = [8, 9];
+console.log(
+  'This provides a -1 default value for all elements if they do not exist:',
+  f,
+  g,
+  h
+);
