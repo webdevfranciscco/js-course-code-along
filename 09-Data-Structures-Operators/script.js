@@ -50,6 +50,7 @@ console.log('first:', _first, 'third:', _third);
 console.log('first:', _first, 'third:', _third);
 // console output: first: Vegetarian third: Italian
 
+/*
 console.log(restaurant.order(2, 0));
 // console output:
 //    (2) ['Garlic Bread', 'Pizza']
@@ -57,3 +58,8 @@ console.log(restaurant.order(2, 0));
 //        1: "Pizza"
 //        length: 2
 //        [[Prototype]]: Array(0)
+*/
+
+// destructure the array returned by the function order()
+const [starter, mainCourse] = restaurant.order(2, 0);
+console.log('Starter:', starter, '/ Main course:', mainCourse);
