@@ -19,7 +19,9 @@ const restaurant = {
 
 console.log('** Destructuring an object **\n*****************************');
 const { name, openingHours, categories, rating } = restaurant;
-console.log('Name:', name);
+console.log('Name:', name); // << name should not be used as I did here.
+// see: https://www.w3schools.com/js/js_reserved.asp, JavaScript Objects, Properties, and Methods, "You should also avoid using the name of JavaScript built-in objects, properties, and methods:"
+
 console.log('Opening hours:', openingHours);
 console.log('Categories:', categories);
 
