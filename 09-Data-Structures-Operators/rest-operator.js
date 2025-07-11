@@ -56,3 +56,15 @@ console.log('pizza, risotto, otherFood:', pizza, risotto, otherFood);
 
 const { sat, ...weekdays } = restaurant.openingHours;
 console.log(weekdays);
+
+// Functions
+
+const createArray = function (...numbers) {
+  console.log(numbers);
+};
+
+createArray(1);
+createArray(1, 2);
+createArray(1, 2, 3);
+createArray(1, 2, 3, 4);
+createArray(1, 2, 3, 4, 5);
