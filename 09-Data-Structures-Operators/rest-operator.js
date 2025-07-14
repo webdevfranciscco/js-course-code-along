@@ -32,6 +32,10 @@ const restaurant = {
       `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`
     );
   },
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log('Main ingredient:', mainIngredient);
+    console.log('Additional ingredients:', otherIngredients);
+  },
 };
 
 // REST IN ARRAYS
@@ -83,3 +87,12 @@ add(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
 //
 const x = [23, 5, 7];
 add(...x); // << unpack the array into a set of numbers by spreading them and use them as an argument
+
+// Real life example
+
+restaurant.orderPizza('mushrooms');
+
+restaurant.orderPizza('mushrooms', 'onion', 'olives', ' spinach');
+
+// SPREAD is used where we would otherwise write VALUES separated by comma
+// REST is used where we would otherwise write VARIABLE NAMES separated by comma
