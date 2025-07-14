@@ -57,10 +57,10 @@ console.log('pizza, risotto, otherFood:', pizza, risotto, otherFood);
 const { sat, ...weekdays } = restaurant.openingHours;
 console.log(weekdays);
 
-// Functions
+// REST as parameter in fnctions
 
 const createArray = function (...numbers) {
-  console.log(numbers);
+  console.log('Array created with the given numbers:', numbers);
 };
 
 createArray(1);
@@ -68,3 +68,13 @@ createArray(1, 2);
 createArray(1, 2, 3);
 createArray(1, 2, 3, 4);
 createArray(1, 2, 3, 4, 5);
+
+// function that can receive any number of parameters
+
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+  console.log(sum);
+};
+
+add(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
