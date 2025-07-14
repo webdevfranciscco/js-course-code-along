@@ -72,9 +72,14 @@ createArray(1, 2, 3, 4, 5);
 // function that can receive any number of parameters
 
 const add = function (...numbers) {
+  // << pack the numbers received into an array with the REST operator
   let sum = 0;
   for (let i = 0; i < numbers.length; i++) sum += numbers[i];
   console.log(sum);
 };
 
 add(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+
+//
+const x = [23, 5, 7];
+add(...x); // << unpack the array into a set of numbers by spreading them and use them as an argument
