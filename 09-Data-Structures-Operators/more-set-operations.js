@@ -48,3 +48,6 @@ console.log('Back into an array:', [
 // ----------------------------------------------------------------------
 const uniqueItalianFoods = italianFoods.difference(mexicanFoods);
 console.log('Difference Italian:', uniqueItalianFoods);
+
+const uniqueMexicanFoods = mexicanFoods.difference(italianFoods);
+console.log('Difference Italian:', uniqueMexicanFoods);
