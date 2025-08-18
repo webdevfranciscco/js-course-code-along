@@ -51,3 +51,9 @@ console.log('Difference Italian:', uniqueItalianFoods);
 
 const uniqueMexicanFoods = mexicanFoods.difference(italianFoods);
 console.log('Difference Italian:', uniqueMexicanFoods);
+
+// sets symmetric difference
+// ----------------------------------------------------------------------
+const uniqueItalianAndMexicanFoods =
+  italianFoods.symmetricDifference(mexicanFoods);
+console.log(uniqueItalianAndMexicanFoods);
