@@ -22,3 +22,7 @@ const commonFoods = italianFoods.intersection(mexicanFoods);
 
 console.log('Intersection:', commonFoods);
 console.log([...commonFoods]);
+
+const italianMexicanFusion = italianFoods.union(mexicanFoods);
+
+console.log('Union: ', italianMexicanFusion);
