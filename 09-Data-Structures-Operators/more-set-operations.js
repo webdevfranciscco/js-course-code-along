@@ -18,11 +18,33 @@ const mexicanFoods = new Set([
   'garlic',
 ]);
 
+// sets intersection
+// ----------------------------------------------------------------------
 const commonFoods = italianFoods.intersection(mexicanFoods);
 
 console.log('Intersection:', commonFoods);
 console.log([...commonFoods]);
 
+// sets union
+// ----------------------------------------------------------------------
 const italianMexicanFusion = italianFoods.union(mexicanFoods);
 
-console.log('Union: ', italianMexicanFusion);
+console.log('Union method: ', italianMexicanFusion);
+
+// another way to create a sets union
+// ----------------------------------------------------------------------
+console.log(
+  'Without union method:',
+  new Set([...italianFoods, ...mexicanFoods])
+);
+
+// convert back to an array
+// ----------------------------------------------------------------------
+console.log('Back into an array:', [
+  ...new Set([...italianFoods, ...mexicanFoods]),
+]);
+
+// sets difference
+// ----------------------------------------------------------------------
+const uniqueItalianFoods = italianFoods.difference(mexicanFoods);
+console.log('Difference Italian:', uniqueItalianFoods);
