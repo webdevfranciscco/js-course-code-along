@@ -63,5 +63,14 @@ console.log('staffUniqueArray:', staffUniqueArray);
 // us case - obtain how many unique positions are there in an array
 // -----------------------------------------------------------------
 console.log(
+  'Number of unique roles in an array:',
   new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size
 );
+
+// us case - obtain how many unique letters are there in a string
+// -----------------------------------------------------------------
+console.log(
+  'Number of unique letters in a string:',
+  new Set('this is a very long string, how many unique letters does it have?')
+    .size
+); //
