@@ -52,9 +52,16 @@ ordersSet.clear(); // this empties the set
 console.log(ordersSet);
 
 // use case - remove duplicate values from arrays
+// -----------------------------------------------------------------
 const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
 const staffUniqueSet = new Set(staff);
 console.log('staffUniqueSet:', staffUniqueSet);
 // which can be made into an array instead, like this:
 const staffUniqueArray = [...new Set(staff)];
 console.log('staffUniqueArray:', staffUniqueArray);
+
+// us case - obtain how many unique positions are there in an array
+// -----------------------------------------------------------------
+console.log(
+  new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size
+);
