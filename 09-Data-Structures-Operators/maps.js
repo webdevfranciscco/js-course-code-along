@@ -50,7 +50,7 @@ console.log(ristorante.get(1));
 console.log(ristorante);
 
 // use example
-
+// --------------------------
 const time = 12;
 
 console.log(
@@ -58,3 +58,14 @@ console.log(
     time > ristorante.get('open') && time < ristorante.get('closed')
   )
 );
+// --------------------------
+
+console.log(ristorante.has('categories'));
+
+ristorante.delete(2);
+
+console.log(ristorante);
+console.log(ristorante.size);
+
+ristorante.clear();
+console.log(ristorante);
