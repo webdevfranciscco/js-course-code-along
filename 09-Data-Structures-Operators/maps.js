@@ -87,3 +87,8 @@ console.log(ristorante);
 
 console.log(ristorante.get(array));
 // --------------------------
+
+// use example, use a DOM object as a key
+// --------------------------
+ristorante.set(document.querySelector('h1'), 'Heading');
+console.log(ristorante);
