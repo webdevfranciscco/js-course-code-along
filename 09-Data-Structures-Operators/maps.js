@@ -135,7 +135,14 @@ console.log(quizz.get('question'));
 for (const [key, value] of quizz) {
   if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
 }
-const answer = Number(prompt('Your answer'));
+// const answer = Number(prompt('Your answer'));
+const answer = 3;
 console.log(answer);
 
 console.log(quizz.get(quizz.get('correct') === answer));
+
+// convert from map to array
+// --------------------------
+console.log([...quizz]);
+console.log([...quizz.keys()]);
+console.log([...quizz.values()]);
