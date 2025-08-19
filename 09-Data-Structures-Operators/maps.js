@@ -127,3 +127,15 @@ console.log(quizz);
 console.log(Object.entries(restaurant.openingHours));
 const hoursMap = new Map(Object.entries(restaurant.openingHours));
 console.log(hoursMap);
+
+// quizz app
+// --------------------------
+console.log(quizz.get('question'));
+
+for (const [key, value] of quizz) {
+  if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+}
+const answer = Number(prompt('Your answer'));
+console.log(answer);
+
+console.log(quizz.get(quizz.get('correct') === answer));
