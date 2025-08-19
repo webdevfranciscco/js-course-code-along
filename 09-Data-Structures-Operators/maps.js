@@ -39,7 +39,7 @@ console.log(ristorante.set(2, 'Lisbon, Portugal'));
 ristorante
   .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
   .set('open', 11)
-  .set('close,23')
+  .set('closed', 23)
   .set(true, 'We are open')
   .set(false, 'We are closed');
 
@@ -48,3 +48,13 @@ console.log(ristorante.get(true));
 console.log(ristorante.get(1));
 
 console.log(ristorante);
+
+// use example
+
+const time = 12;
+
+console.log(
+  ristorante.get(
+    time > ristorante.get('open') && time < ristorante.get('closed')
+  )
+);
