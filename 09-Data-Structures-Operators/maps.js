@@ -67,5 +67,23 @@ ristorante.delete(2);
 console.log(ristorante);
 console.log(ristorante.size);
 
-ristorante.clear();
+// ristorante.clear();
+// console.log(ristorante);
+
+// --------------------------
+// this will not work, because these are not the same array on the heap
+ristorante.set([1, 2], 'Test');
 console.log(ristorante);
+
+console.log(ristorante.get([1, 2]));
+// --------------------------
+
+// we need to do this to make it work
+// --------------------------
+const array = [1, 2];
+ristorante.set(array, 'Test');
+
+console.log(ristorante);
+
+console.log(ristorante.get(array));
+// --------------------------
