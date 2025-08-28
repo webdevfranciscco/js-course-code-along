@@ -40,3 +40,13 @@ const /* ********************************************* */
 checkMiddleSeat('11B');
 checkMiddleSeat('23C');
 checkMiddleSeat('3E');
+
+// check the console to see these three outputs
+console.log(new Array('H', 'i'));
+console.log(new Object('Hi'));
+console.log(new String('Hi'));
+console.log(typeof new String('Hi'));
+
+// all string methods return primitives,
+// even if called on a string object
+console.log(typeof new String('Hi').slice(1));
