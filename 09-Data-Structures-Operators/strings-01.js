@@ -84,3 +84,18 @@ const normalizedEmail = loginEmail.toLowerCase().trim();
 console.log(normalizedEmail);
 
 console.log(email === normalizedEmail);
+
+// replacing parts of strings
+
+const flightPriceGB = '288,97€';
+
+const flightPriceUS = flightPriceGB.replace('€', '$').replace(',', '.');
+
+console.log(flightPriceUS);
+
+const announcement =
+  'All passengers come to boarding door 23. Boarding door 23!';
+
+console.log(announcement.replace('door', 'gate').replace('door', 'gate'));
+
+console.log(announcement.replaceAll('door', 'gate'));
