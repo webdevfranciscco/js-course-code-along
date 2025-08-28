@@ -35,7 +35,7 @@ const /* ********************************************* */
     const s = seat.slice(-1);
     if (s === 'B' || s === 'E') console.log('You got the middle seat...');
     else console.log('You got lucky!');
-  };
+  }; /* ---------------------------------------------- */
 
 checkMiddleSeat('11B');
 checkMiddleSeat('23C');
@@ -50,3 +50,22 @@ console.log(typeof new String('Hi'));
 // all string methods return primitives,
 // even if called on a string object
 console.log(typeof new String('Hi').slice(1));
+
+// change to lower or upper case
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+// fix capitalization to first letter uppercase
+let passenger = 'jOnAS'; // should be 'Jonas'
+
+// my solution
+passenger =
+  passenger.slice(0, 1).toUpperCase() +
+  passenger.slice(1, passenger.length).toLowerCase();
+console.log(passenger);
+
+//Jona's solution
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
