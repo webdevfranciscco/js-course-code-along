@@ -1,7 +1,7 @@
 'use strict';
 
 const airline = 'TAP Air Portugal';
-const plane = 'A320';
+let plane = 'A320';
 
 console.log(plane[0]);
 console.log(plane[1]);
@@ -103,3 +103,17 @@ console.log(announcement.replaceAll('door', 'gate'));
 // old solution using regular expressions to replace strings
 
 console.log(announcement.replaceAll(/door/g, 'gate'));
+
+// booleans
+
+plane = 'Airbus A320neo';
+
+console.log(plane.includes('A320')); // returns true
+console.log(plane.includes('Boeing')); // returns false
+
+console.log(plane.startsWith('A320')); // returns false
+console.log(plane.startsWith('Airbus')); // returns true
+
+if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+  console.log('Part of the new Airbus family');
+}
