@@ -117,3 +117,19 @@ console.log(plane.startsWith('Airbus')); // returns true
 if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
   console.log('Part of the new Airbus family');
 }
+
+// practice exercise
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  // think of what would happen if lowercase were not used here!
+
+  if (baggage.includes('knife') || baggage.includes('gun')) {
+    console.log('You are NOT allowed on board');
+  } else {
+    console.log('Welcome aboard!');
+  }
+};
+
+checkBaggage('I have a laptop, some Food and a pocket Knife');
+checkBaggage('Socks and camera');
+checkBaggage('Got some snacks and a gun for protection');
