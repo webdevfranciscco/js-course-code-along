@@ -99,3 +99,7 @@ const announcement =
 console.log(announcement.replace('door', 'gate').replace('door', 'gate'));
 
 console.log(announcement.replaceAll('door', 'gate'));
+
+// old solution using regular expressions to replace strings
+
+console.log(announcement.replaceAll(/door/g, 'gate'));
