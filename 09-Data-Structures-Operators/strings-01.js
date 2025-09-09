@@ -145,6 +145,8 @@ const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
 
 console.log(newName);
 
+// use example
+
 const capitalizedName = function (name) {
   const names = name.split(' ');
   const namesUpper = [];
@@ -156,3 +158,31 @@ const capitalizedName = function (name) {
 
 capitalizedName('jessica ann smith davis');
 capitalizedName('jonas schmedtmann');
+
+// use example
+
+const capitalizedName2 = function (name) {
+  const names = name.split(' ');
+  const namesUpper = [];
+  for (const n of names) {
+    namesUpper.push(n[0].toUpperCase() + n.slice(1));
+  }
+  console.log(namesUpper.join(' '));
+};
+
+capitalizedName2('jessica ann smith davis');
+capitalizedName2('jonas schmedtmann');
+
+// another way to do the same
+
+const capitalizedName3 = function (name) {
+  const names = name.split(' ');
+  const namesUpper = [];
+  for (const n of names) {
+    namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+  }
+  console.log(namesUpper.join(' '));
+};
+
+capitalizedName3('jessica ann smith davis');
+capitalizedName3('jonas schmedtmann');
