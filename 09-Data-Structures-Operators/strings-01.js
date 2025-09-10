@@ -186,3 +186,16 @@ const capitalizedName3 = function (name) {
 
 capitalizedName3('jessica ann smith davis');
 capitalizedName3('jonas schmedtmann');
+
+// padding
+
+const message = 'Go to gate 23!';
+console.log(message.padStart(25, '+').padEnd(30, '+'));
+
+const maskCreditCard = function (number) {
+  const str = number.toString();
+  const lastFourCharacters = str.slice(-4);
+  return lastFourCharacters.padStart(str.length, '*');
+};
+
+console.log(maskCreditCard(1234432112344321));
